@@ -230,7 +230,7 @@ export const news = [
     body: [
       { type: 'p', text: 'ELMEC’s engineering scholarship programme will double to 120 fully funded places from next academic year, with priority given to students from communities near the group’s live projects.' },
       { type: 'p', text: 'Scholars receive tuition funding, paid site placements each summer and a guaranteed graduate-programme interview. Two-thirds of previous cohorts have joined the group after graduating.' },
-      { type: 'quote', text: 'The best social-value line in any project budget is a local engineer who stays one.', attribution: 'Elena Marchetti, Chief Executive Officer' },
+      { type: 'quote', text: 'The best social-value line in any project budget is a local engineer who stays one.', attribution: 'Mukhtar Mohsin, Chief Executive Officer' },
     ],
   },
 ];

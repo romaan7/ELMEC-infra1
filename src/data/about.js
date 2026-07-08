@@ -116,13 +116,13 @@ export const leadership = {
   heading: 'Experienced hands, accountable to the work',
   members: [
     {
-      id: 'elena-marchetti',
-      name: 'Elena Marchetti',
+      id: 'mukhtar-mohsin',
+      name: 'Mukhtar Mohsin',
       role: 'Chief Executive Officer',
       bio: 'Civil engineer by training; 28 years delivering major transport programmes across three continents.',
-      photo:
-        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=75',
-      photoAlt: 'Portrait of Elena Marchetti, Chief Executive Officer',
+      // Real portrait — served from public/images/team/
+      photo: '/images/team/mukhtar-mohsin.jpg',
+      photoAlt: 'Portrait of Mukhtar Mohsin, Chief Executive Officer',
     },
     {
       id: 'david-okonkwo',
