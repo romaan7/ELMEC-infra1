@@ -1,0 +1,68 @@
+/**
+ * Global stylesheet.
+ * All design tokens live in tailwind.config.js — this file only carries
+ * base element defaults and the SectionReveal motion classes.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white font-sans text-body text-ink;
+  }
+
+  ::selection {
+    @apply bg-steel text-white;
+  }
+
+  /* Visible, consistent keyboard focus everywhere (WCAG 2.4.7) */
+  :focus-visible {
+    @apply outline-none ring-2 ring-steel ring-offset-2;
+  }
+  .bg-navy :focus-visible,
+  .dark-surface :focus-visible {
+    @apply ring-steel-300 ring-offset-navy;
+  }
+}
+
+@layer components {
+  /*
+   * SectionReveal motion: a single restrained fade-and-rise.
+   * The .reveal element starts translated and transparent; the
+   * SectionReveal component adds .reveal-visible once the element
+   * enters the viewport (IntersectionObserver).
+   */
+  .reveal {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition:
+      opacity 700ms cubic-bezier(0.25, 0.1, 0.25, 1),
+      transform 700ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Accessibility: honour the user's motion preference (WCAG 2.3.3).
+     Content simply appears in place — never hidden. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
