@@ -8,7 +8,7 @@ import {
 } from '../components/index.js';
 
 // Content — data only (CMS-swappable, see src/data/contact.js)
-import { contactHero, ENQUIRY_TYPES, offices, generalEnquiries } from '../data/contact.js';
+import { contactHero, ENQUIRY_TYPES, offices, generalEnquiries, mapEmbed } from '../data/contact.js';
 
 /**
  * ContactPage — enquiry form + general enquiries aside, the single
@@ -70,32 +70,24 @@ export default function ContactPage() {
           id="office-heading"
           eyebrow="Head office"
           heading="Find us in London"
-          lede="One office, one accountable team. PLACEHOLDER details — replace with the real address, phone and email."
+          lede="One office, one accountable team."
         />
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <SectionReveal className="lg:col-span-4">
             <OfficeCard office={offices[0]} />
           </SectionReveal>
 
-          {/* MAP INTEGRATION POINT ------------------------------------------
-              Replace this placeholder with the embedded map for the head
-              office (e.g. Google Maps iframe or a Mapbox component). Keep an
-              accessible title on the iframe and a text address fallback. */}
+          {/* Embedded Google Map for the head office (src/data/contact.js).
+              The OfficeCard alongside is the text fallback for the address. */}
           <SectionReveal delay={120} className="lg:col-span-8">
-            <div
-              className="flex h-full min-h-72 w-full items-center justify-center border border-grey-200 bg-white"
-              role="img"
-              aria-label="Map placeholder showing the location of ELMEC head office, One Meridian Square, London"
-            >
-              <div className="px-6 text-center">
-                <p className="font-display text-caption font-semibold uppercase tracking-[0.2em] text-grey-400">
-                  Map — Head Office
-                </p>
-                <p className="mt-2 text-caption text-grey-500">
-                  Embedded map slot · One Meridian Square, London EC2A 4DP
-                </p>
-              </div>
-            </div>
+            <iframe
+              title={mapEmbed.title}
+              src={mapEmbed.src}
+              className="h-full min-h-72 w-full border border-grey-200 bg-white"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </SectionReveal>
         </div>
       </Section>

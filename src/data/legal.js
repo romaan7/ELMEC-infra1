@@ -18,7 +18,7 @@ export const legalPages = [
       {
         heading: 'Who we are',
         paragraphs: [
-          'ELMEC Infrastructure ("ELMEC", "we", "us") is the data controller for personal information collected through this website and in the course of our business. Our global headquarters is at One Meridian Square, London EC2A 4DP, United Kingdom.',
+          'ELMEC Infrastructure ("ELMEC", "we", "us") is the data controller for personal information collected through this website and in the course of our business. Our head office is at Levett Gardens, London, England, IG3 9BU, United Kingdom.',
         ],
       },
       {

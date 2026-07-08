@@ -24,14 +24,14 @@ export const ENQUIRY_TYPES = [
   'General enquiry',
 ];
 
-/** Head office — ELMEC's single office. PLACEHOLDER details. */
+/** Head office — ELMEC's single office. */
 export const offices = [
   {
     id: 'london',
     region: 'United Kingdom',
     name: 'London — Head Office',
-    addressLines: ['One Meridian Square', 'London EC2A 4DP', 'United Kingdom'],
-    phone: '+44 (0)20 7946 0000',
+    addressLines: ['Levett Gardens', 'London, England', 'IG3 9BU'],
+    phone: '+44 7912 605143',
     email: 'enquiries@elmec-infrastructure.com',
   },
 ];
@@ -39,6 +39,12 @@ export const offices = [
 export const generalEnquiries = {
   heading: 'General enquiries',
   text: 'For anything that doesn’t fit the form, call or write — enquiries reach the founder’s team directly, not a switchboard maze.',
-  phone: '+44 (0)20 7946 0000',
+  phone: '+44 7912 605143',
   email: 'enquiries@elmec-infrastructure.com',
+};
+
+/** Embedded map for the head office (Google Maps embed, no API key needed). */
+export const mapEmbed = {
+  title: 'Map showing the ELMEC head office at Levett Gardens, London, IG3 9BU',
+  src: 'https://www.google.com/maps?q=Levett%20Gardens%2C%20London%2C%20England%2C%20IG3%209BU&output=embed',
 };

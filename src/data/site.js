@@ -88,10 +88,10 @@ export const footerColumns = [
   },
 ];
 
-/** Head-office contact block. PLACEHOLDER — replace with real details. */
+/** Head-office contact block. */
 export const contact = {
-  addressLines: ['ELMEC Infrastructure', 'One Meridian Square', 'London EC2A 4DP', 'United Kingdom'],
-  phone: '+44 (0)20 7946 0000',
+  addressLines: ['ELMEC Infrastructure', 'Levett Gardens', 'London, England', 'IG3 9BU'],
+  phone: '+44 7912 605143',
   email: 'enquiries@elmec-infrastructure.com',
 };
 

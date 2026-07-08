@@ -40,7 +40,7 @@ export const headquarters = {
   eyebrow: 'Where we are',
   heading: 'Headquartered in London, United Kingdom',
   text: 'ELMEC operates from a single head office in London — close to the programmes, clients and supply chains of the UK’s infrastructure market. As the firm grows, so will its footprint; until then, one office, one accountable team.',
-  addressLines: ['One Meridian Square', 'London EC2A 4DP', 'United Kingdom'], // PLACEHOLDER
+  addressLines: ['Levett Gardens', 'London, England', 'IG3 9BU'],
   ambition: 'Global recognition is the ambition. London is the base camp.',
 };
 
