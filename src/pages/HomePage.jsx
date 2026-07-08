@@ -7,40 +7,46 @@ import {
   StatBand,
   CTABand,
   ServiceCard,
-  ProjectCard,
+  ExperienceCard,
   SectorTile,
-  NewsCard,
 } from '../components/index.js';
 
 // Content — data only, presentation-free (CMS-swappable, see src/data/*)
 import {
   hero,
   capabilitiesIntro,
-  projectsIntro,
+  experienceIntro,
   sectorsIntro,
   sustainability,
-  newsIntro,
   closingCta,
 } from '../data/home.js';
 import { stats } from '../data/stats.js';
 import { services } from '../data/services.js';
-import { projects } from '../data/projects.js';
+import { experience } from '../data/experience.js';
 import { sectors } from '../data/sectors.js';
-import { news } from '../data/news.js';
 
 /**
  * HomePage — assembled top-to-bottom from the design-system primitives.
- * Order: Hero → StatBand → Capabilities → Featured projects → Sectors →
- * Sustainability → News → Closing CTA.
+ * Order: Hero → StatBand → Capabilities → Founder track record →
+ * Sectors → Sustainability → Closing CTA.
+ *
+ * ⚠️ ATTRIBUTION: the stats band and track-record section present the
+ * FOUNDER'S experience with prior employers, never ELMEC's own delivery
+ * record. Keep that framing in the data (src/data/stats.js,
+ * src/data/experience.js) and the section lede below.
  */
 export default function HomePage() {
+  // Founder track record — first four UK landmark programmes
+  const featuredExperience = experience.filter((item) => item.group === 'uk').slice(0, 4);
+
   return (
     <>
       {/* 1 — Hero: cinematic full-bleed opener, nav sits transparent above */}
       <Hero {...hero} />
 
-      {/* 2 — Trust band: the credibility signal */}
-      <StatBand stats={stats} />
+      {/* 2 — Trust band: founder experience + firm capability (NOT ELMEC
+             delivery counts — see the attribution note in src/data/stats.js) */}
+      <StatBand stats={stats} ariaLabel="Founder experience and firm capability at a glance" />
 
       {/* 3 — Capabilities overview: the three service lines */}
       <Section tone="white" aria-labelledby="capabilities-heading">
@@ -54,19 +60,17 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* 4 — Featured projects: image-led grid, first project featured large */}
-      <Section tone="mist" aria-labelledby="projects-heading">
-        <SectionHeading id="projects-heading" {...projectsIntro} />
-        <SectionReveal>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="md:col-span-2 lg:row-span-2 lg:h-full">
-              <ProjectCard project={projects[0]} featured />
-            </div>
-            {projects.slice(1).map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        </SectionReveal>
+      {/* 4 — Founder track record (formerly "Featured projects").
+             The lede carries the required founder attribution. */}
+      <Section tone="mist" aria-labelledby="experience-heading">
+        <SectionHeading id="experience-heading" {...experienceIntro} />
+        <div className="grid gap-6 md:grid-cols-2">
+          {featuredExperience.map((item, i) => (
+            <SectionReveal key={item.id} delay={(i % 2) * 100}>
+              <ExperienceCard item={item} />
+            </SectionReveal>
+          ))}
+        </div>
       </Section>
 
       {/* 5 — Sectors strip: compact typographic tiles */}
@@ -120,20 +124,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* 7 — Latest news & insights */}
-      <Section tone="white" aria-labelledby="news-heading">
-        <SectionHeading id="news-heading" {...newsIntro} />
-        <div className="grid gap-10 md:grid-cols-3 md:gap-8">
-          {/* Newsroom dataset is ordered latest-first; homepage shows three */}
-          {news.slice(0, 3).map((article, i) => (
-            <SectionReveal key={article.id} delay={i * 100} className="h-full">
-              <NewsCard article={article} />
-            </SectionReveal>
-          ))}
-        </div>
-      </Section>
-
-      {/* 8 — Closing CTA band */}
+      {/* 7 — Closing CTA band (Contact only) */}
       <CTABand {...closingCta} />
     </>
   );

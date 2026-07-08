@@ -134,7 +134,7 @@ export const legalPages = [
       {
         heading: 'Our business and supply chain',
         paragraphs: [
-          'We deliver civil, electrical and mechanical engineering across five regions, engaging thousands of suppliers and subcontractors. We recognise that construction carries elevated modern-slavery risk, particularly in labour supply, and we treat that risk as a safety-critical issue.',
+          'We are a London-based firm delivering civil, electrical and mechanical engineering, engaging suppliers and subcontractors as our portfolio grows. We recognise that construction carries elevated modern-slavery risk, particularly in labour supply, and we treat that risk as a safety-critical issue from our first engagement.',
         ],
       },
       {

@@ -91,8 +91,9 @@ export default function Footer() {
               ELMEC<span className="text-steel-300">.</span>
             </p>
             <p className="mt-4 text-body text-grey-300">
-              Civil, electrical and mechanical engineering for the infrastructure
-              the world depends on — delivered with precision, at scale.
+              A London-based firm delivering integrated civil, electrical and
+              mechanical works — led by cost certainty and built on twenty
+              years of founder experience.
             </p>
             <ul className="mt-6 flex gap-3" aria-label="ELMEC on social media">
               {socialLinks.map((social) => (
@@ -137,10 +138,10 @@ export default function Footer() {
             </nav>
           ))}
 
-          {/* Contact block — PLACEHOLDER HQ details, see src/data/site.js */}
+          {/* Contact block — single London head office (PLACEHOLDER details, see src/data/site.js) */}
           <div>
             <h3 className="font-display text-caption font-semibold uppercase tracking-[0.14em] text-grey-400">
-              Global headquarters
+              Head office — London
             </h3>
             <address className="mt-5 space-y-3 not-italic">
               <p className="text-body text-grey-300">

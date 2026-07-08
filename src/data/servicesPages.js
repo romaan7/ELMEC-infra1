@@ -1,12 +1,14 @@
 /**
  * Services pages content — the overview page and the three discipline
  * detail pages. Each detail entry drives one instance of the shared
- * ServiceDetailPage template, guaranteeing structural consistency.
+ * ServiceDetailPage template.
  *
- * PLACEHOLDER COPY & IMAGERY — replace with approved messaging and
- * commissioned photography. CMS-ready: same-shape swap.
- * `relatedSectorIds` reference src/data/sectors.js; related projects are
- * matched by discipline from src/data/projects.js.
+ * FRAMING NOTE: copy describes ELMEC's present-tense CAPABILITY and
+ * approach. Landmark programmes are attributed to the FOUNDER'S career
+ * with prior employers — never claimed as ELMEC contracts. Related
+ * experience strips are rendered with founder attribution by the
+ * template. PLACEHOLDER COPY & IMAGERY — CMS-ready.
+ * `relatedSectorIds` reference src/data/sectors.js.
  */
 
 /** Services overview page (/services). */
@@ -24,25 +26,25 @@ export const servicesOverview = {
   intro: {
     eyebrow: 'The integrated model',
     heading: 'Why one firm, not three contractors',
-    lede: 'Most major programmes stitch their disciplines together through subcontract interfaces. ELMEC removes the interfaces.',
+    lede: 'Most programmes stitch their disciplines together through subcontract interfaces. ELMEC is built to remove them — with cost certainty as the connective discipline.',
     points: [
       {
         id: 'accountability',
         title: 'One accountable team',
         description:
-          'A single delivery organisation owns the schedule end to end — no interface claims, no gaps between packages.',
+          'A single delivery organisation owns the scope end to end — no interface claims, no gaps between packages.',
+      },
+      {
+        id: 'estimating',
+        title: 'Cost certainty first',
+        description:
+          'First-principles estimating and disciplined bid management — the founder’s specialism — before a single commitment is made.',
       },
       {
         id: 'coordination',
         title: 'Designed together, built together',
         description:
-          'Civil, electrical and mechanical engineers coordinate in one federated model from day one, so clashes are resolved on screen, not on site.',
-      },
-      {
-        id: 'certainty',
-        title: 'Certainty at handover',
-        description:
-          'Self-delivered commissioning across all three disciplines means assets are proven as systems, not as parts.',
+          'Civil, electrical and mechanical scopes coordinated in one model from day one, so clashes are resolved on screen, not on site.',
       },
     ],
   },
@@ -58,7 +60,7 @@ export const serviceDetails = [
       eyebrow: 'Services — Civil Infrastructure',
       headline: 'The ground everything else stands on.',
       subhead:
-        'Highways, bridges, rail, water and heavy civil works — engineered for design lives measured in generations.',
+        'Stations, highways, bridges, marine and heavy civil works — planned and priced by people who have done this work for twenty years.',
       /* HERO PHOTOGRAPHY SLOT — replace with commissioned civil-works photography. */
       image:
         'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2400&q=80',
@@ -66,29 +68,29 @@ export const serviceDetails = [
     },
     overview: {
       eyebrow: 'The discipline',
-      heading: 'Heavy civil engineering, delivered with discipline',
+      heading: 'Heavy civil engineering, priced from first principles',
       paragraphs: [
-        'ELMEC’s civil business plans and delivers the permanent works that carry everything else: alignments, structures, earthworks and drainage that must perform for fifty years or more. We self-perform the critical-path trades — piling, major concrete, structural erection — because programme certainty lives in the work you control directly.',
-        'Every scheme runs on the same operating system: a federated digital model, a rehearsed temporary-works regime, and a safety culture that treats near-misses as seriously as incidents. It is not glamorous. It is why our civil programmes finish when we said they would.',
+        'Civil infrastructure is ELMEC’s core discipline, and cost certainty is how we practise it. Every estimate is built from first principles — production rates, plant, temporary works, logistics — by a firm whose founder spent two decades doing exactly that on King’s Cross, the M25, Crossrail and HS2 with the contractors that delivered them.',
+        'We bring the same rigour to delivery: temporary works design and construction planning treated as core engineering, method statements that survive contact with site, and commercial administration that keeps the account as clean as the works.',
       ],
     },
     subCapabilities: {
-      heading: 'What we deliver',
+      heading: 'What we offer',
       items: [
-        { id: 'roads', title: 'Roads & Highways', description: 'Motorways, expressways and strategic corridors, from earthworks to open-to-traffic.' },
-        { id: 'bridges', title: 'Bridges & Structures', description: 'Major crossings, viaducts and complex structures in concrete and steel.' },
-        { id: 'rail', title: 'Rail & Metro Civils', description: 'Alignments, stations and structures for heavy rail, metro and light rail.' },
-        { id: 'water-infra', title: 'Water Infrastructure', description: 'Treatment works civils, flood defences, embankments and marine structures.' },
-        { id: 'earthworks', title: 'Earthworks & Ground Engineering', description: 'Bulk earthworks, piling, ground improvement and deep excavations.' },
-        { id: 'structures', title: 'Industrial & Special Structures', description: 'Heavy foundations, silos, tanks and long-span industrial frames.' },
+        { id: 'stations', title: 'Stations & Rail Civils', description: 'Station structures, platforms, trackside civils and rail earthworks.' },
+        { id: 'highways', title: 'Highways & Pavements', description: 'Widening, pavement works and live-carriageway construction.' },
+        { id: 'bridges', title: 'Bridges & Structures', description: 'Concrete and steel structures, from footbridges to major spans.' },
+        { id: 'marine', title: 'Marine & Coastal Works', description: 'Breakwaters, jetties, quays and coastal protection.' },
+        { id: 'earthworks', title: 'Earthworks & Temporary Works', description: 'Bulk earthworks, excavation support and temporary works design.' },
+        { id: 'estimating', title: 'Estimating & Bid Services', description: 'First-principles estimates, bid management and tender review for major civils.' },
       ],
     },
-    relatedSectorIds: ['transport-rail', 'water', 'utilities', 'industrial'],
+    relatedSectorIds: ['transport-rail', 'highways', 'ports-marine', 'water-pipelines'],
     cta: {
-      headline: 'Planning a major civil programme?',
-      subhead: 'Talk to the team that self-delivers the critical path.',
+      headline: 'A civil package to price or plan?',
+      subhead: 'Start with an estimate built from first principles.',
       primary: { label: 'Contact us', href: '/contact' },
-      secondary: { label: 'View civil projects', href: '/projects' },
+      secondary: { label: 'View the founder’s track record', href: '/experience' },
     },
   },
   {
@@ -99,7 +101,7 @@ export const serviceDetails = [
       eyebrow: 'Services — Electrical Works',
       headline: 'Power, delivered and proven.',
       subhead:
-        'Transmission, distribution and high-voltage systems — designed, installed and energised to exacting international standards.',
+        'Power distribution, rail electrical systems and renewable connections — integrated with the civil works that carry them.',
       /* HERO PHOTOGRAPHY SLOT — replace with commissioned electrical-works photography. */
       image:
         'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2400&q=80',
@@ -107,29 +109,29 @@ export const serviceDetails = [
     },
     overview: {
       eyebrow: 'The discipline',
-      heading: 'From the grid to the final circuit',
+      heading: 'Electrical delivery without the interface risk',
       paragraphs: [
-        'ELMEC’s electrical business works across the full chain: transmission substations, distribution networks, renewable grid connections and the building systems they ultimately serve. Our engineers hold design authority in-house, so we can stand behind a system from single-line diagram to energisation certificate.',
-        'The discipline’s hard currency is outage time. We compress it — pre-commissioned bays, digital substations, rehearsed switching programmes — because every hour a client’s network is down is an hour we are accountable for.',
+        'On most programmes the electrical scope arrives through a separate contractor, and the interfaces arrive with it. ELMEC delivers electrical works inside the same team as the civils — one programme, one coordination model, one accountable point when the power must come on.',
+        'Our capability spans station and building electrical services, solar and power project systems, and the distribution infrastructure around them — priced with the same first-principles discipline as everything else we do.',
       ],
     },
     subCapabilities: {
-      heading: 'What we deliver',
+      heading: 'What we offer',
       items: [
-        { id: 'transmission', title: 'Power Transmission & Distribution', description: 'Overhead lines, cabling and network reinforcement up to 400 kV.' },
-        { id: 'substations', title: 'Substations', description: 'AIS, GIS and digital substations — new-build, extension and refurbishment.' },
-        { id: 'hvlv', title: 'HV / LV Systems', description: 'Switchgear, protection, control and power quality across voltage levels.' },
-        { id: 'building-electrical', title: 'Building Electrical Services', description: 'Complete electrical fit-out for complex, critical buildings.' },
-        { id: 'renewables', title: 'Renewable Grid Connections', description: 'Wind, solar and storage connections, from consenting support to export.' },
-        { id: 'controls', title: 'Instrumentation & Control', description: 'SCADA, telemetry and control systems that make assets operable.' },
+        { id: 'distribution', title: 'Power Distribution', description: 'LV/HV distribution, switchgear and site-wide power infrastructure.' },
+        { id: 'rail-systems', title: 'Rail Electrical Systems', description: 'Station power, trackside electrical works and systems interfaces.' },
+        { id: 'solar', title: 'Solar & Renewables', description: 'Solar farm electrical systems and grid connections.' },
+        { id: 'building-electrical', title: 'Building Electrical Services', description: 'Complete electrical fit-out for stations, plants and complex buildings.' },
+        { id: 'controls', title: 'Instrumentation & Control', description: 'Control systems, telemetry and monitoring that make assets operable.' },
+        { id: 'testing', title: 'Testing & Commissioning', description: 'Inspection, testing and documented energisation.' },
       ],
     },
-    relatedSectorIds: ['energy-power', 'utilities', 'buildings', 'transport-rail'],
+    relatedSectorIds: ['energy-power', 'transport-rail', 'industrial-buildings', 'highways'],
     cta: {
-      headline: 'Need certainty at energisation?',
-      subhead: 'Our electrical teams design, build and prove the system — end to end.',
+      headline: 'Electrical scope on a wider programme?',
+      subhead: 'Keep it inside one accountable team.',
       primary: { label: 'Contact us', href: '/contact' },
-      secondary: { label: 'View electrical projects', href: '/projects' },
+      secondary: { label: 'View the founder’s track record', href: '/experience' },
     },
   },
   {
@@ -140,7 +142,7 @@ export const serviceDetails = [
       eyebrow: 'Services — Mechanical Works',
       headline: 'Precision at industrial scale.',
       subhead:
-        'Plant, piping, HVAC and heavy mechanical installation — built exactly, tested thoroughly, handed over ready to run.',
+        'Plant, piping, HVAC and building services — built exactly, tested thoroughly, handed over ready to run.',
       /* HERO PHOTOGRAPHY SLOT — replace with commissioned mechanical-works photography. */
       image:
         'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2400&q=80',
@@ -150,27 +152,27 @@ export const serviceDetails = [
       eyebrow: 'The discipline',
       heading: 'The moving parts of permanent assets',
       paragraphs: [
-        'Mechanical delivery is where tolerance meets scale: kilometres of piping installed to millimetre accuracy, rotating equipment aligned to the micron, ventilation systems balanced across entire hospital campuses. ELMEC self-delivers this work with directly employed, multi-certified crews and an offsite fabrication capability that moves quality-critical welding into controlled conditions.',
+        'Mechanical delivery is where tolerance meets scale: piping installed to millimetre accuracy, plant aligned and balanced, ventilation proven across whole buildings. ELMEC’s mechanical capability draws on the founder’s industrial formation — plant expansion works with Tata Motors and mechanical scopes across two decades of integrated programmes.',
         'We measure ourselves at commissioning. A mechanical system is not finished when it is installed — it is finished when it runs at specification, witnessed, documented and handed to the operator with nothing left open.',
       ],
     },
     subCapabilities: {
-      heading: 'What we deliver',
+      heading: 'What we offer',
       items: [
-        { id: 'hvac', title: 'HVAC Systems', description: 'Heating, ventilation and cooling for critical and large-scale environments.' },
+        { id: 'hvac', title: 'HVAC Systems', description: 'Heating, ventilation and cooling for stations, plants and buildings.' },
         { id: 'process', title: 'Process & Plant Installation', description: 'Rotating equipment, vessels and packaged plant, set and aligned to spec.' },
-        { id: 'piping', title: 'Industrial Piping Systems', description: 'Shop-fabricated and field-welded piping across all service classes.' },
-        { id: 'building-services', title: 'Building Services', description: 'Integrated mechanical services and offsite MEP modules for complex buildings.' },
+        { id: 'piping', title: 'Piping Systems', description: 'Fabricated and field-installed pipework across service classes.' },
+        { id: 'building-services', title: 'Building Services', description: 'Integrated mechanical services for transport and industrial buildings.' },
+        { id: 'pumping', title: 'Pumping & Water Plant', description: 'Pumping stations, valves and pipeline mechanical installations.' },
         { id: 'commissioning', title: 'Commissioning & Handover', description: 'System testing, balancing and documented handover to operations.' },
-        { id: 'asset-support', title: 'Maintenance & Asset Support', description: 'Planned maintenance and outage support for operating facilities.' },
       ],
     },
-    relatedSectorIds: ['industrial', 'buildings', 'water', 'energy-power'],
+    relatedSectorIds: ['industrial-buildings', 'water-pipelines', 'transport-rail', 'ports-marine'],
     cta: {
       headline: 'Commissioning is the contract.',
       subhead: 'Talk to us about mechanical delivery that finishes properly.',
       primary: { label: 'Contact us', href: '/contact' },
-      secondary: { label: 'View mechanical projects', href: '/projects' },
+      secondary: { label: 'View the founder’s track record', href: '/experience' },
     },
   },
 ];

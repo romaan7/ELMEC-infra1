@@ -1,28 +1,32 @@
 /**
  * Sectors pages content — overview page + the six sector detail entries.
- * Each detail entry drives one instance of the shared SectorDetailPage
- * template (/sectors/:slug). PLACEHOLDER COPY & IMAGERY — replace with
- * approved messaging and commissioned photography. CMS-ready.
  *
- * `disciplines[].serviceHref` links back to the Stage Two service pages;
- * related projects are matched by sector from src/data/projects.js.
+ * FRAMING NOTE: sector copy describes ELMEC's genuine, present-tense
+ * CAPABILITY (expertise derived from the founder's domains). Where
+ * landmark programmes are referenced, they are attributed to the
+ * FOUNDER'S career with prior employers — never claimed as ELMEC
+ * contracts. Related-experience strips are rendered with explicit
+ * founder attribution by the SectorDetailPage template.
+ *
+ * PLACEHOLDER COPY & IMAGERY — replace with approved messaging and
+ * commissioned photography. CMS-ready.
  */
 
 export const sectorsOverview = {
   hero: {
     eyebrow: 'Sectors',
-    headline: 'Different industries. The same discipline.',
+    headline: 'Deep in the sectors that matter to us.',
     subhead:
-      'Six sectors, one delivery model — and the compound advantage of engineering lessons carried from each into all the others.',
+      'Six sector strengths, formed across twenty years of rail, highways, energy, marine and industrial work — and carried into every ELMEC engagement.',
     /* HERO PHOTOGRAPHY SLOT — replace with commissioned photography. */
     image:
       'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=2400&q=80',
     imageAlt: 'City infrastructure at dusk seen from above',
   },
   intro: {
-    eyebrow: 'Cross-sector experience',
-    heading: 'Why breadth is an engineering advantage',
-    lede: 'A tunnelling method proven on metro work de-risks a water main. A commissioning regime built for hospitals raises the bar on industrial plants. Clients get every sector we have ever worked in.',
+    eyebrow: 'Sector strengths',
+    heading: 'Expertise you can trace',
+    lede: 'Every sector below maps directly to work our founder has estimated, planned or commercially led. We claim strength where we can show the experience behind it — and nowhere else.',
   },
 };
 
@@ -33,49 +37,99 @@ export const sectorDetails = [
     slug: 'transport-rail',
     name: 'Transport & Rail',
     href: '/sectors/transport-rail',
-    descriptor: 'Rail, metro, highways and aviation programmes that keep economies moving.',
+    descriptor: 'Stations, trackside civils and rail systems — our deepest strength.',
     /* PLACEHOLDER IMAGE — replace with commissioned sector photography. */
     image:
       'https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1600&q=75',
     imageAlt: 'Railway tracks converging toward the horizon in warm light',
     hero: {
       eyebrow: 'Sectors — Transport & Rail',
-      headline: 'Keeping economies moving.',
+      headline: 'Our home ground.',
       subhead:
-        'Rail, metro, highways and aviation — delivered in live environments where closure is rarely an option.',
+        'Stations, trackside civil works and rail systems — the sector where our founder’s career runs deepest, from King’s Cross to HS2.',
       image:
         'https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=2400&q=80',
       imageAlt: 'Railway corridor stretching toward the horizon',
     },
     overview: {
-      heading: 'Built around the operating railway, road and runway',
+      heading: 'Station and trackside expertise, formed on the landmark programmes',
       paragraphs: [
-        'Transport infrastructure is delivered inside constraints most sectors never see: possessions measured in hours, corridors that cannot close, and regulators with zero appetite for risk. ELMEC has spent two decades building the planning discipline those constraints demand — from overnight viaduct erection above live highways to resignalling delivered between the last train and the first.',
-        'Our transport teams combine heavy civil delivery with in-house traction power, systems and station MEP capability, which is why authorities repeatedly trust us with programmes where the interfaces are the risk.',
+        'Rail is where ELMEC’s capability is strongest, because it is where our founder’s career was made: estimating and commercial leadership on King’s Cross Northern Ticket Hall, Crossrail’s central stations, Network Rail works at Waterloo and station estimates for HS2 — with the firms that delivered them. ELMEC brings that formation to bear as a firm: station civils, trackside works and rail systems, planned and priced by people who know what this work truly costs.',
+        'We understand possessions, isolations and the discipline of the operating railway — and we understand the estimate that survives contact with all three. For station buildings, platform works, trackside civils and rail MEP, ELMEC offers tier-one method at founder-led scale.',
       ],
     },
     disciplines: [
       {
         serviceHref: '/services/civil-infrastructure',
         title: 'Civil Infrastructure',
-        text: 'Alignments, viaducts, stations and earthworks — the permanent way and everything that carries it.',
+        text: 'Station civils, platforms, trackside structures and earthworks.',
       },
       {
         serviceHref: '/services/electrical-works',
         title: 'Electrical Works',
-        text: 'Traction power, overhead line equipment, signalling power and station electrical systems.',
+        text: 'Rail electrical systems, station power and low-voltage installations.',
       },
       {
         serviceHref: '/services/mechanical-works',
         title: 'Mechanical Works',
-        text: 'Tunnel ventilation, station HVAC and building services for passenger environments.',
+        text: 'Station ventilation, building services and plant installation.',
       },
     ],
     cta: {
-      headline: 'A corridor that cannot close?',
-      subhead: 'Talk to the teams that deliver inside live transport environments.',
+      headline: 'A rail package to price or deliver?',
+      subhead: 'Start with the people who estimated the landmark stations.',
       primary: { label: 'Contact us', href: '/contact' },
-      secondary: { label: 'View transport projects', href: '/projects' },
+      secondary: { label: 'See the founder’s rail track record', href: '/experience' },
+    },
+  },
+  {
+    id: 'highways',
+    slug: 'highways',
+    name: 'Highways',
+    href: '/sectors/highways',
+    descriptor: 'Motorway widening, pavements and highway structures.',
+    /* PLACEHOLDER IMAGE — replace with commissioned sector photography. */
+    image:
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=75',
+    imageAlt: 'Major highway structure works with cranes',
+    hero: {
+      eyebrow: 'Sectors — Highways',
+      headline: 'Live-traffic engineering.',
+      subhead:
+        'Motorway widening, pavement and highway structures — capability formed on M25-scale works where the road never closed.',
+      image:
+        'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2400&q=80',
+      imageAlt: 'Highway structures under construction',
+    },
+    overview: {
+      heading: 'Widening, structures and pavement — priced from first principles',
+      paragraphs: [
+        'Highway work is unforgiving on cost: traffic management, phasing and possessions can swing a tender further than the permanent works themselves. Our founder’s estimating and commercial roles on the M25 widening with Balfour Beatty taught exactly where those swings hide — and ELMEC prices them from first principles rather than benchmark optimism.',
+        'We offer capability across carriageway widening, pavement works, highway structures and bridges, with temporary works design and construction planning treated as core disciplines rather than afterthoughts.',
+      ],
+    },
+    disciplines: [
+      {
+        serviceHref: '/services/civil-infrastructure',
+        title: 'Civil Infrastructure',
+        text: 'Widening, earthworks, pavements, structures and bridge works.',
+      },
+      {
+        serviceHref: '/services/electrical-works',
+        title: 'Electrical Works',
+        text: 'Highway lighting, signage power and technology ducting.',
+      },
+      {
+        serviceHref: '/services/mechanical-works',
+        title: 'Mechanical Works',
+        text: 'Drainage plant, pumping installations and tunnel M&E.',
+      },
+    ],
+    cta: {
+      headline: 'A highways scheme that must stay live?',
+      subhead: 'We plan and price around the traffic, not despite it.',
+      primary: { label: 'Contact us', href: '/contact' },
+      secondary: { label: 'See the founder’s highways track record', href: '/experience' },
     },
   },
   {
@@ -83,249 +137,199 @@ export const sectorDetails = [
     slug: 'energy-power',
     name: 'Energy & Power',
     href: '/sectors/energy-power',
-    descriptor: 'Generation, grids and renewables for a decarbonising world.',
+    descriptor: 'Solar and power infrastructure, from civils to connection.',
     /* PLACEHOLDER IMAGE — replace with commissioned sector photography. */
     image:
       'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=75',
-    imageAlt: 'Wind turbines across open farmland under a clear sky',
+    imageAlt: 'Renewable energy infrastructure across open land',
     hero: {
       eyebrow: 'Sectors — Energy & Power',
-      headline: 'The transition, delivered.',
+      headline: 'The transition needs builders.',
       subhead:
-        'Renewable generation, grid reinforcement and substations — the physical work behind every net-zero commitment.',
+        'Solar and power infrastructure — capability spanning our founder’s recent solar bid leadership and his early-career power projects in India.',
       image:
         'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=2400&q=80',
-      imageAlt: 'Onshore wind farm at first light',
+      imageAlt: 'Wind and solar generation at first light',
     },
     overview: {
-      heading: 'The bottleneck is delivery, and delivery is our business',
+      heading: 'Power capability at both ends of a career',
       paragraphs: [
-        'Every energy strategy now depends on the same scarce resource: teams who can actually build generation and grid at pace. ELMEC delivers both sides of the connection — wind, solar and storage on one side; substations, lines and reinforcement on the other — so projects are not hostage to a third party at their most critical interface.',
-        'Our digital substation designs cut outage windows and commissioning time, and our civil capability means foundations, access and cable routes sit inside the same programme as the electrical scope.',
+        'ELMEC’s energy credentials bracket our founder’s career: construction engineering on power and nuclear-ancillary projects in India with L&T and Hindustan Construction at one end; bid management and cost leadership across solar portfolios at Enable Infrastructure at the other. The firm carries both — heavy power civils and the fast, repeatable delivery economics of renewables.',
+        'For solar farms, power project civils and the balance-of-plant works around generation, ELMEC offers integrated civil, electrical and mechanical capability with estimates built from production rates, not hope.',
       ],
     },
     disciplines: [
       {
         serviceHref: '/services/electrical-works',
         title: 'Electrical Works',
-        text: 'Substations to 400 kV, transmission, distribution and renewable grid connections.',
+        text: 'Solar DC/AC systems, connections and power distribution.',
       },
       {
         serviceHref: '/services/civil-infrastructure',
         title: 'Civil Infrastructure',
-        text: 'Turbine foundations, access infrastructure, cable routes and heavy plant civils.',
+        text: 'Foundations, access, cable routes and heavy power civils.',
       },
       {
         serviceHref: '/services/mechanical-works',
         title: 'Mechanical Works',
-        text: 'Balance-of-plant mechanical systems, cooling and generation plant installation.',
+        text: 'Balance-of-plant mechanical systems and installations.',
       },
     ],
     cta: {
-      headline: 'Generation is only half the project.',
-      subhead: 'We deliver the connection too — one team, one programme.',
+      headline: 'An energy scheme to cost or build?',
+      subhead: 'Generation economics live or die at estimate stage — start there, with us.',
       primary: { label: 'Contact us', href: '/contact' },
-      secondary: { label: 'View energy projects', href: '/projects' },
+      secondary: { label: 'See the founder’s energy track record', href: '/experience' },
     },
   },
   {
-    id: 'water',
-    slug: 'water',
-    name: 'Water',
-    href: '/sectors/water',
-    descriptor: 'Treatment, networks and flood resilience for growing cities.',
+    id: 'ports-marine',
+    slug: 'ports-marine',
+    name: 'Ports & Marine',
+    href: '/sectors/ports-marine',
+    descriptor: 'Breakwaters, jetties and marine civil works.',
     /* PLACEHOLDER IMAGE — replace with commissioned sector photography. */
     image:
-      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=75',
-    imageAlt: 'Heavy civil works in progress at a water infrastructure site',
+      'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=75',
+    imageAlt: 'Waterfront infrastructure at dusk',
     hero: {
-      eyebrow: 'Sectors — Water',
-      headline: 'The quietest critical infrastructure.',
+      eyebrow: 'Sectors — Ports & Marine',
+      headline: 'Engineering against the sea.',
       subhead:
-        'Treatment works, networks and flood defence — assets nobody notices until they fail, engineered so they don’t.',
+        'Breakwaters, jetties and marine civil works — grounded in our founder’s construction engineering on major Indian port programmes.',
       image:
-        'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2400&q=80',
-      imageAlt: 'Construction cranes over a large water treatment facility',
+        'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=2400&q=80',
+      imageAlt: 'Coastal infrastructure at dusk',
     },
     overview: {
-      heading: 'Live plants, rising demand, tightening consents',
+      heading: 'Marine works, understood from the water line',
       paragraphs: [
-        'Water utilities face a brutal equation: aging assets, growing populations, stricter discharge consents — and no permission to interrupt supply while any of it is fixed. ELMEC specialises in exactly that condition. Our staged-cutover methodology, proven on major live works upgrades, rebuilds capacity around operating plants without a day offline.',
-        'From treatment civils and process mechanical installation to pumping stations and flood resilience programmes, we deliver the full asset — and commission it as a system.',
+        'Marine civil engineering punishes assumptions: weather windows, armour logistics and plant availability dominate cost in ways land-based benchmarks never capture. Our founder’s early career included construction engineering on port breakwater works in India with L&T and Hindustan Construction — experience in exactly those realities.',
+        'ELMEC offers capability in breakwaters, jetties, quay works and coastal protection, with estimating and planning that treat the marine environment as the first constraint, not a risk-register footnote.',
       ],
     },
     disciplines: [
       {
         serviceHref: '/services/civil-infrastructure',
         title: 'Civil Infrastructure',
-        text: 'Treatment works civils, embankments, flood defences and marine structures.',
+        text: 'Breakwaters, armouring, quays, jetties and coastal structures.',
       },
       {
         serviceHref: '/services/mechanical-works',
         title: 'Mechanical Works',
-        text: 'Process plant, pumps, piping and the commissioning that proves the works.',
+        text: 'Marine plant installations, moorings and handling equipment.',
       },
       {
         serviceHref: '/services/electrical-works',
         title: 'Electrical Works',
-        text: 'MCCs, instrumentation, control systems and site-wide power distribution.',
+        text: 'Quayside power, lighting and navigation systems.',
       },
     ],
     cta: {
-      headline: 'An upgrade the plant can’t pause for?',
-      subhead: 'Staged cutovers are our home ground.',
+      headline: 'Marine works on the horizon?',
+      subhead: 'Price the sea state before it prices you.',
       primary: { label: 'Contact us', href: '/contact' },
-      secondary: { label: 'View water projects', href: '/projects' },
+      secondary: { label: 'See the founder’s marine track record', href: '/experience' },
     },
   },
   {
-    id: 'buildings',
-    slug: 'buildings',
-    name: 'Buildings',
-    href: '/sectors/buildings',
-    descriptor: 'Commercial, civic and healthcare facilities built to perform.',
-    /* PLACEHOLDER IMAGE — replace with commissioned sector photography. */
-    image:
-      'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=75',
-    imageAlt: 'Contemporary building façade with precise repeating geometry',
-    hero: {
-      eyebrow: 'Sectors — Buildings',
-      headline: 'Complex buildings, engineered properly.',
-      subhead:
-        'Hospitals, civic and commercial facilities where the services are the building — and the tolerance for error is zero.',
-      image:
-        'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2400&q=80',
-      imageAlt: 'Monumental building façade in low evening light',
-    },
-    overview: {
-      heading: 'Where MEP density decides the outcome',
-      paragraphs: [
-        'In a modern hospital or data-rich commercial building, the mechanical and electrical systems are most of the cost, most of the risk and all of the performance. ELMEC approaches buildings as engineering programmes: offsite-manufactured MEP modules, federated coordination from day one, and commissioning treated as the contract rather than the epilogue.',
-        'Our all-electric delivery experience — heat pumps, thermal storage, smart distribution — makes us a natural partner for clients whose buildings must decarbonise as well as perform.',
-      ],
-    },
-    disciplines: [
-      {
-        serviceHref: '/services/mechanical-works',
-        title: 'Mechanical Works',
-        text: 'HVAC, offsite MEP modules and building services for critical environments.',
-      },
-      {
-        serviceHref: '/services/electrical-works',
-        title: 'Electrical Works',
-        text: 'Complete electrical fit-out, resilient power and low-voltage systems.',
-      },
-      {
-        serviceHref: '/services/civil-infrastructure',
-        title: 'Civil Infrastructure',
-        text: 'Foundations, frames and heavy structural works for major facilities.',
-      },
-    ],
-    cta: {
-      headline: 'A building that has to work on day one?',
-      subhead: 'We commission systems, not just install them.',
-      primary: { label: 'Contact us', href: '/contact' },
-      secondary: { label: 'View building projects', href: '/projects' },
-    },
-  },
-  {
-    id: 'industrial',
-    slug: 'industrial',
-    name: 'Industrial',
-    href: '/sectors/industrial',
-    descriptor: 'Manufacturing and process facilities engineered for uptime.',
+    id: 'industrial-buildings',
+    slug: 'industrial-buildings',
+    name: 'Industrial & Buildings',
+    href: '/sectors/industrial-buildings',
+    descriptor: 'Plants, factories and station buildings.',
     /* PLACEHOLDER IMAGE — replace with commissioned sector photography. */
     image:
       'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=75',
-    imageAlt: 'Engineer inspecting large-scale industrial plant',
+    imageAlt: 'Large industrial plant hall during works',
     hero: {
-      eyebrow: 'Sectors — Industrial',
-      headline: 'Precision, at production scale.',
+      eyebrow: 'Sectors — Industrial & Buildings',
+      headline: 'Buildings that work for a living.',
       subhead:
-        'Manufacturing, process and logistics facilities where programme speed and millimetre tolerances have to coexist.',
+        'Plants, factories and station buildings — from Tata Motors plant expansion to the great London station structures of our founder’s career.',
       image:
         'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2400&q=80',
-      imageAlt: 'Large industrial process hall during installation',
+      imageAlt: 'Industrial building interior during installation works',
     },
     overview: {
-      heading: 'The schedule is set by the market, not the site',
+      heading: 'Industrial logic, applied to structures',
       paragraphs: [
-        'Industrial clients commit to customers before they commit to contractors: launch dates are fixed, and the facility has to meet them. ELMEC builds industrial programmes backwards from go-live — overlapping civils, structures and mechanical installation as parallel fronts, and releasing zones to process vendors months before practical completion.',
-        'Our shop-fabrication capability moves quality-critical welding and module assembly into controlled conditions, protecting both tolerance and programme through winter, heat and everything else the site throws at it.',
+        'ELMEC approaches buildings the way industry does: as assets with a job, where structure, services and programme serve production or passengers rather than architecture awards. Our founder’s experience spans both ends — industrial plant expansion with Tata Motors in India, and the station buildings of King’s Cross, Crossrail and HS2 with their delivery contractors.',
+        'We offer capability in industrial plants, factories, depots and transport buildings, with the integrated civil, electrical and mechanical delivery that services-dense buildings demand.',
       ],
     },
     disciplines: [
       {
-        serviceHref: '/services/mechanical-works',
-        title: 'Mechanical Works',
-        text: 'Process plant, piping, rotating equipment and materials-handling installation.',
-      },
-      {
         serviceHref: '/services/civil-infrastructure',
         title: 'Civil Infrastructure',
-        text: 'Heavy foundations, industrial frames and campus-wide earthworks.',
+        text: 'Foundations, frames, floors and heavy structural works.',
+      },
+      {
+        serviceHref: '/services/mechanical-works',
+        title: 'Mechanical Works',
+        text: 'HVAC, process installations and building services.',
       },
       {
         serviceHref: '/services/electrical-works',
         title: 'Electrical Works',
-        text: 'HV supply, distribution, control systems and process instrumentation.',
+        text: 'Power distribution, lighting and control systems.',
       },
     ],
     cta: {
-      headline: 'A launch date already promised?',
-      subhead: 'We build programmes backwards from go-live.',
+      headline: 'A building with a job to do?',
+      subhead: 'We engineer for its output, not just its opening.',
       primary: { label: 'Contact us', href: '/contact' },
-      secondary: { label: 'View industrial projects', href: '/projects' },
+      secondary: { label: 'See the founder’s industrial track record', href: '/experience' },
     },
   },
   {
-    id: 'utilities',
-    slug: 'utilities',
-    name: 'Utilities',
-    href: '/sectors/utilities',
-    descriptor: 'Gas, telecoms and district energy networks, delivered at scale.',
+    id: 'water-pipelines',
+    slug: 'water-pipelines',
+    name: 'Water & Pipelines',
+    href: '/sectors/water-pipelines',
+    descriptor: 'Major pipeline infrastructure and associated works.',
     /* PLACEHOLDER IMAGE — replace with commissioned sector photography. */
     image:
       'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=75',
-    imageAlt: 'Utility corridor infrastructure stretching toward the horizon',
+    imageAlt: 'Linear utility infrastructure stretching toward the horizon',
     hero: {
-      eyebrow: 'Sectors — Utilities',
-      headline: 'Networks beneath everything.',
+      eyebrow: 'Sectors — Water & Pipelines',
+      headline: 'Linear infrastructure, done in kilometres.',
       subhead:
-        'District energy, telecoms and utility networks — thousands of small interfaces, managed as one programme.',
+        'Major pipeline infrastructure and associated civil works — where our founder’s engineering career began.',
       image:
         'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2400&q=80',
-      imageAlt: 'Utility infrastructure corridor at dusk',
+      imageAlt: 'Pipeline corridor infrastructure at dusk',
     },
     overview: {
-      heading: 'Linear programmes are logistics programmes',
+      heading: 'Pipeline delivery is a production line — treat it like one',
       paragraphs: [
-        'A network project is a thousand small projects wearing one contract: every street, crossing and connection its own negotiation with the public realm. ELMEC industrialises that reality — standardised work packages, trenchless techniques where the surface cannot be opened, and reinstatement quality that keeps municipal permission flowing.',
-        'From district heating loops beneath dense downtowns to national fibre backbones across three terrains, our utilities teams deliver linear infrastructure with the safety record the streetscape demands.',
+        'A pipeline is a factory laid on its side: the economics live in production rates, crossings and reinstatement, not in the pipe itself. Our founder began his career on major cross-country pipeline programmes in India with L&T and Hindustan Construction — the kind of work that teaches linear-infrastructure discipline permanently.',
+        'ELMEC offers capability in pipeline civils, crossings, pumping installations and associated water infrastructure, with estimates and construction plans built around achievable daily production, weather and land access.',
       ],
     },
     disciplines: [
       {
-        serviceHref: '/services/electrical-works',
-        title: 'Electrical Works',
-        text: 'Network cabling, telecoms infrastructure and connection works.',
+        serviceHref: '/services/civil-infrastructure',
+        title: 'Civil Infrastructure',
+        text: 'Trenching, crossings, thrust bores and reinstatement.',
       },
       {
         serviceHref: '/services/mechanical-works',
         title: 'Mechanical Works',
-        text: 'District energy plant, pipework networks and energy-centre installation.',
+        text: 'Pipework, pumping stations and valve installations.',
       },
       {
-        serviceHref: '/services/civil-infrastructure',
-        title: 'Civil Infrastructure',
-        text: 'Trenching, trenchless crossings, chambers and public-realm reinstatement.',
+        serviceHref: '/services/electrical-works',
+        title: 'Electrical Works',
+        text: 'Pump power, instrumentation and control systems.',
       },
     ],
     cta: {
-      headline: 'A network to build under a living city?',
-      subhead: 'We keep the streets open while the work goes in.',
+      headline: 'Kilometres to lay?',
+      subhead: 'Talk to us before the production rate is a guess in someone’s tender.',
       primary: { label: 'Contact us', href: '/contact' },
-      secondary: { label: 'View utilities projects', href: '/projects' },
+      secondary: { label: 'See the founder’s pipeline track record', href: '/experience' },
     },
   },
 ];

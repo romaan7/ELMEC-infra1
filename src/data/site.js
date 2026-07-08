@@ -4,13 +4,16 @@
  * NOTE (CMS integration): every export in src/data/* is a plain, serialisable
  * structure. When a CMS/API is connected, replace these modules with fetch
  * calls returning the same shapes — no component changes required.
+ *
+ * POSITIONING NOTE: ELMEC is a newly founded, London-based firm. The
+ * "Experience" section presents the FOUNDER'S career track record (prior
+ * employers' programmes), never ELMEC's own delivered portfolio.
  */
 
 /**
  * Primary navigation.
  * Items with `children` render as mega-menu dropdowns on desktop and
- * accordions in the mobile menu. All routes are placeholders registered
- * in App.jsx, ready for real pages in later stages.
+ * accordions in the mobile menu.
  */
 export const primaryNav = [
   { label: 'About', href: '/about' },
@@ -21,12 +24,12 @@ export const primaryNav = [
       {
         label: 'Civil Infrastructure',
         href: '/services/civil-infrastructure',
-        description: 'Highways, bridges, tunnels and heavy civil works.',
+        description: 'Stations, highways, bridges and heavy civil works.',
       },
       {
         label: 'Electrical Works',
         href: '/services/electrical-works',
-        description: 'Transmission, distribution and high-voltage systems.',
+        description: 'Power, distribution and rail electrical systems.',
       },
       {
         label: 'Mechanical Works',
@@ -35,22 +38,21 @@ export const primaryNav = [
       },
     ],
   },
-  { label: 'Projects', href: '/projects' },
+  /* Founder track record — NOT an ELMEC delivery portfolio (see /experience) */
+  { label: 'Experience', href: '/experience' },
   {
     label: 'Sectors',
     href: '/sectors',
     children: [
-      { label: 'Transport & Rail', href: '/sectors/transport-rail', description: 'Rail, metro, roads and aviation.' },
-      { label: 'Energy & Power', href: '/sectors/energy-power', description: 'Generation, grids and renewables.' },
-      { label: 'Water', href: '/sectors/water', description: 'Treatment, networks and flood defence.' },
-      { label: 'Buildings', href: '/sectors/buildings', description: 'Commercial, civic and healthcare.' },
-      { label: 'Industrial', href: '/sectors/industrial', description: 'Manufacturing and process facilities.' },
-      { label: 'Utilities', href: '/sectors/utilities', description: 'Gas, telecoms and district energy.' },
+      { label: 'Transport & Rail', href: '/sectors/transport-rail', description: 'Stations, trackside civils and rail systems.' },
+      { label: 'Highways', href: '/sectors/highways', description: 'Motorway widening, pavements and structures.' },
+      { label: 'Energy & Power', href: '/sectors/energy-power', description: 'Solar and power infrastructure.' },
+      { label: 'Ports & Marine', href: '/sectors/ports-marine', description: 'Breakwaters, jetties and marine works.' },
+      { label: 'Industrial & Buildings', href: '/sectors/industrial-buildings', description: 'Plants, factories and station buildings.' },
+      { label: 'Water & Pipelines', href: '/sectors/water-pipelines', description: 'Major pipeline infrastructure.' },
     ],
   },
   { label: 'Sustainability', href: '/sustainability' },
-  { label: 'Careers', href: '/careers' },
-  { label: 'News', href: '/news' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -60,8 +62,8 @@ export const footerColumns = [
     heading: 'Company',
     links: [
       { label: 'About', href: '/about' },
-      { label: 'Careers', href: '/careers' },
-      { label: 'News', href: '/news' },
+      { label: 'Experience', href: '/experience' },
+      { label: 'Sustainability', href: '/sustainability' },
       { label: 'Contact', href: '/contact' },
     ],
   },
@@ -77,16 +79,16 @@ export const footerColumns = [
     heading: 'Sectors',
     links: [
       { label: 'Transport & Rail', href: '/sectors/transport-rail' },
+      { label: 'Highways', href: '/sectors/highways' },
       { label: 'Energy & Power', href: '/sectors/energy-power' },
-      { label: 'Water', href: '/sectors/water' },
-      { label: 'Buildings', href: '/sectors/buildings' },
-      { label: 'Industrial', href: '/sectors/industrial' },
-      { label: 'Utilities', href: '/sectors/utilities' },
+      { label: 'Ports & Marine', href: '/sectors/ports-marine' },
+      { label: 'Industrial & Buildings', href: '/sectors/industrial-buildings' },
+      { label: 'Water & Pipelines', href: '/sectors/water-pipelines' },
     ],
   },
 ];
 
-/** Global HQ contact block. PLACEHOLDER — replace with real details. */
+/** Head-office contact block. PLACEHOLDER — replace with real details. */
 export const contact = {
   addressLines: ['ELMEC Infrastructure', 'One Meridian Square', 'London EC2A 4DP', 'United Kingdom'],
   phone: '+44 (0)20 7946 0000',
@@ -100,7 +102,7 @@ export const socialLinks = [
   { label: 'YouTube', href: 'https://www.youtube.com', icon: 'youtube' },
 ];
 
-/** Compliance / legal row — standard tier-one footer links. */
+/** Compliance / legal row. */
 export const legalLinks = [
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Terms of Use', href: '/terms-of-use' },

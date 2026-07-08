@@ -1,11 +1,15 @@
 /**
  * Trust-band key figures.
- * PLACEHOLDER METRICS — replace with audited corporate figures before launch.
- * `value` and `suffix` are split so the numeral can be styled independently.
+ *
+ * ⚠️ ATTRIBUTION NOTE — these figures reflect the FOUNDER'S career
+ * experience and ELMEC's integrated capability, NOT counts of projects
+ * delivered by ELMEC (a newly founded firm). Labels carry the
+ * attribution in the copy itself — keep it when editing.
+ * PLACEHOLDER values to be confirmed by the founder before launch.
  */
 export const stats = [
-  { id: 'countries', value: '40', suffix: '+', label: 'Countries' },
-  { id: 'projects', value: '500', suffix: '+', label: 'Projects delivered' },
-  { id: 'years', value: '25', suffix: '+', label: 'Years of expertise' },
-  { id: 'people', value: '10,000', suffix: '+', label: 'People worldwide' },
+  { id: 'years', value: '20', suffix: '+', label: 'Years — our founder’s infrastructure career' },
+  { id: 'tenders', value: '£8m', suffix: '+', label: 'Single-tender values managed by our founder' },
+  { id: 'programmes', value: '10', suffix: '+', label: 'Landmark UK programmes in the founder’s track record' },
+  { id: 'disciplines', value: '3', suffix: '', label: 'Disciplines under one roof — civil, electrical, mechanical' },
 ];

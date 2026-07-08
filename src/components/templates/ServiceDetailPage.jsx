@@ -4,9 +4,9 @@ import SectionReveal from '../ui/SectionReveal.jsx';
 import SectionHeading from '../ui/SectionHeading.jsx';
 import Hero from '../sections/Hero.jsx';
 import CTABand from '../sections/CTABand.jsx';
-import ProjectCard from '../cards/ProjectCard.jsx';
+import ExperienceCard from '../cards/ExperienceCard.jsx';
 import Button from '../ui/Button.jsx';
-import { projects } from '../../data/projects.js';
+import { experience } from '../../data/experience.js';
 import { sectors } from '../../data/sectors.js';
 
 /**
@@ -15,12 +15,14 @@ import { sectors } from '../../data/sectors.js';
  *
  * Driven entirely by one entry from src/data/servicesPages.js, so all
  * three pages are guaranteed structurally identical and a fourth
- * discipline would be pure data. Related projects are derived from the
- * shared projects dataset by discipline; related sectors resolve against
- * src/data/sectors.js.
+ * discipline would be pure data.
+ *
+ * ⚠️ ATTRIBUTION: the related-experience strip shows the FOUNDER'S
+ * track record with prior employers (see src/data/experience.js), never
+ * ELMEC projects — the section lede states this and must remain.
  */
 export default function ServiceDetailPage({ service }) {
-  const relatedProjects = projects.filter((p) => p.disciplines.includes(service.title)).slice(0, 3);
+  const relatedExperience = experience.filter((item) => item.disciplines.includes(service.title)).slice(0, 3);
   const relatedSectors = sectors.filter((s) => service.relatedSectorIds.includes(s.id));
 
   return (
@@ -91,19 +93,21 @@ export default function ServiceDetailPage({ service }) {
         </SectionReveal>
       </Section>
 
-      {/* Related projects, drawn from the shared dataset by discipline */}
-      {relatedProjects.length > 0 && (
-        <Section tone="mist" aria-labelledby={`${service.id}-projects`}>
+      {/* Founder track record in this discipline — attributed experience,
+          never ELMEC contracts (see src/data/experience.js) */}
+      {relatedExperience.length > 0 && (
+        <Section tone="mist" aria-labelledby={`${service.id}-experience`}>
           <SectionHeading
-            id={`${service.id}-projects`}
-            eyebrow="Proof, not promises"
-            heading={`${service.title} in delivery`}
-            cta={{ label: 'View all projects', href: '/projects' }}
+            id={`${service.id}-experience`}
+            eyebrow="Founder track record"
+            heading={`${service.title}: the experience behind the firm`}
+            lede="Programmes our founder worked on with prior employers, before establishing ELMEC — presented as career experience, not ELMEC contracts."
+            cta={{ label: 'View the full track record', href: '/experience' }}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {relatedProjects.map((project, i) => (
-              <SectionReveal key={project.id} delay={i * 100}>
-                <ProjectCard project={project} />
+            {relatedExperience.map((item, i) => (
+              <SectionReveal key={item.id} delay={i * 100}>
+                <ExperienceCard item={item} />
               </SectionReveal>
             ))}
           </div>

@@ -1,15 +1,18 @@
 /**
- * Homepage editorial content — hero, section intros, sustainability teaser
- * and closing CTA. PLACEHOLDER COPY written in the final tone of voice;
- * replace with approved messaging. CMS-ready: same-shape API swap.
+ * Homepage editorial content.
+ *
+ * POSITIONING: ELMEC is a newly founded, London-based civil infrastructure
+ * firm. Copy states firm capability and founder experience — never an
+ * ELMEC delivery track record. Global recognition is framed as ambition.
+ * PLACEHOLDER COPY in the final tone of voice. CMS-ready.
  */
 
 export const hero = {
   eyebrow: 'Civil · Electrical · Mechanical',
   headline: "Engineering the world's essential infrastructure.",
   subhead:
-    'From transport networks to power systems, ELMEC delivers the projects that economies are built on — safely, precisely, and for the long term.',
-  cta: { label: 'Explore our projects', href: '/projects' },
+    'ELMEC is a London-based civil infrastructure firm delivering integrated civil, electrical and mechanical works — built on two decades of founder experience across the UK’s landmark rail and highways programmes.',
+  cta: { label: 'Explore our track record', href: '/experience' },
   /* HERO PHOTOGRAPHY SLOT — replace with commissioned, art-directed
      infrastructure photography (≥2400px wide, licensed for web). */
   image:
@@ -21,44 +24,49 @@ export const hero = {
 export const capabilitiesIntro = {
   eyebrow: 'What we do',
   heading: 'Three disciplines. One standard.',
-  lede: 'ELMEC integrates civil, electrical and mechanical engineering under a single delivery model — so complex programmes move as one.',
+  lede: 'ELMEC integrates civil, electrical and mechanical engineering under a single delivery model — with a distinctive edge in cost certainty: first-principles estimating, disciplined bid management and commercial rigour.',
 };
 
-export const projectsIntro = {
-  eyebrow: 'Featured projects',
-  heading: 'Built to outlast the headlines.',
-  lede: 'A selection of current and recently completed programmes across our sectors.',
-  cta: { label: 'View all projects', href: '/projects' },
+/**
+ * Founder track-record section (formerly "Featured projects").
+ * ⚠️ ATTRIBUTION: these are the founder's programmes with prior
+ * employers — the lede must always state this plainly.
+ */
+export const experienceIntro = {
+  eyebrow: 'Founder track record',
+  heading: 'Experience that predates the company.',
+  lede: 'Before establishing ELMEC, our founder Mukhtar Mohsin worked on the UK’s landmark infrastructure programmes with the firms that delivered them. Presented here as his career experience — not ELMEC contracts.',
+  cta: { label: 'View the full track record', href: '/experience' },
 };
 
 export const sectorsIntro = {
   eyebrow: 'Sectors',
-  heading: 'Where we work',
-  lede: 'Deep sector knowledge, applied wherever essential infrastructure is needed.',
+  heading: 'Where our expertise runs deepest',
+  lede: 'Sector strengths formed across twenty years of rail, highways, energy, marine and industrial work.',
 };
 
 export const sustainability = {
   eyebrow: 'Sustainability',
   heading: 'Responsible delivery is not a programme. It is the programme.',
-  lede: 'Every ELMEC project is measured against three commitments — to the climate, to the people who build with us, and to the communities we build for.',
+  lede: 'From its first tender, every ELMEC project is measured against three commitments — to the climate, to the people who build with us, and to the communities we build for.',
   pillars: [
     {
       id: 'net-zero',
       title: 'Net zero by 2040',
       description:
-        'A science-based pathway across our operations and supply chain, with interim targets reported annually.',
+        'A science-based pathway across our operations and supply chain, with progress reported annually as we grow.',
     },
     {
       id: 'safety',
       title: 'Health & safety, first',
       description:
-        'An uncompromising zero-harm standard on every site, in every country, on every shift.',
+        'An uncompromising zero-harm standard on every site, from day one — no exceptions.',
     },
     {
       id: 'communities',
       title: 'Communities that benefit',
       description:
-        'Local employment, skills programmes and social value embedded into how we deliver.',
+        'Local employment, skills and social value embedded into how we deliver.',
     },
   ],
   cta: { label: 'Our sustainability commitments', href: '/sustainability' },
@@ -68,16 +76,10 @@ export const sustainability = {
   imageAlt: 'Wind turbines on open land at sunrise, seen from ground level',
 };
 
-export const newsIntro = {
-  eyebrow: 'News & insights',
-  heading: 'The latest from ELMEC',
-  cta: { label: 'All news', href: '/news' },
-};
-
+/** Closing CTA — points to Contact only (no Careers section on this site). */
 export const closingCta = {
   headline: "Let's build what lasts.",
   subhead:
-    'Whether you are planning a major programme or building a career in engineering, we would like to hear from you.',
+    'If you are planning a programme and need cost certainty from day one, start the conversation.',
   primary: { label: 'Contact us', href: '/contact' },
-  secondary: { label: 'Explore careers', href: '/careers' },
 };

@@ -4,17 +4,21 @@ import SectionReveal from '../ui/SectionReveal.jsx';
 import SectionHeading from '../ui/SectionHeading.jsx';
 import Hero from '../sections/Hero.jsx';
 import CTABand from '../sections/CTABand.jsx';
-import ProjectCard from '../cards/ProjectCard.jsx';
+import ExperienceCard from '../cards/ExperienceCard.jsx';
 import PlaceholderPage from '../../pages/PlaceholderPage.jsx';
 import { getSectorBySlug } from '../../data/sectorsPages.js';
-import { projects } from '../../data/projects.js';
+import { experience } from '../../data/experience.js';
 
 /**
  * SectorDetailPage — shared template for all six sector pages
  * (/sectors/:slug), driven entirely by one entry from
  * src/data/sectorsPages.js. Structure: hero → sector overview →
- * discipline relevance (linking to service pages) → related projects →
- * sector-specific CTA. A seventh sector would be pure data.
+ * discipline relevance (linking to service pages) → founder track
+ * record in the sector → sector-specific CTA.
+ *
+ * ⚠️ ATTRIBUTION: the related-experience strip shows the FOUNDER'S
+ * track record with prior employers (see src/data/experience.js), never
+ * ELMEC projects — the section lede states this and must remain.
  */
 export default function SectorDetailPage() {
   const { slug } = useParams();
@@ -29,7 +33,7 @@ export default function SectorDetailPage() {
     );
   }
 
-  const relatedProjects = projects.filter((p) => p.sector === sector.name).slice(0, 3);
+  const relatedExperience = experience.filter((item) => item.sector === sector.name).slice(0, 3);
 
   return (
     <>
@@ -89,19 +93,21 @@ export default function SectorDetailPage() {
         </ul>
       </Section>
 
-      {/* Related projects from the shared dataset, filtered by sector */}
-      {relatedProjects.length > 0 && (
-        <Section tone="white" aria-labelledby={`${sector.id}-projects`}>
+      {/* Founder track record in this sector — attributed experience,
+          never ELMEC contracts (see src/data/experience.js) */}
+      {relatedExperience.length > 0 && (
+        <Section tone="white" aria-labelledby={`${sector.id}-experience`}>
           <SectionHeading
-            id={`${sector.id}-projects`}
-            eyebrow="Proof, not promises"
-            heading={`${sector.name} in delivery`}
-            cta={{ label: 'View all projects', href: '/projects' }}
+            id={`${sector.id}-experience`}
+            eyebrow="Founder track record"
+            heading={`${sector.name}: the experience behind the firm`}
+            lede="Programmes our founder worked on with prior employers, before establishing ELMEC — presented as career experience, not ELMEC contracts."
+            cta={{ label: 'View the full track record', href: '/experience' }}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {relatedProjects.map((project, i) => (
-              <SectionReveal key={project.id} delay={i * 100}>
-                <ProjectCard project={project} />
+            {relatedExperience.map((item, i) => (
+              <SectionReveal key={item.id} delay={i * 100}>
+                <ExperienceCard item={item} />
               </SectionReveal>
             ))}
           </div>

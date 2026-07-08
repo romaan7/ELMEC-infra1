@@ -1,9 +1,11 @@
 # ELMEC Infrastructure — Corporate Website
 
-**Stage One:** design system, global components, homepage.
-**Stage Two:** About, Services (overview + three discipline pages via one `ServiceDetailPage` template), Projects (filterable portfolio + `CaseStudyPage` template with gallery/lightbox).
-**Stage Three (site complete):** Sectors (overview + `SectorDetailPage` template), Sustainability/ESG, Careers (filterable `JobListings`, ATS-ready), News (filterable index + `ArticlePage` template), Contact (validated `ContactForm`, office directory, map slot), and the four compliance pages via one `LegalPage` template. Every nav, footer and mega-menu link now resolves to a real page.
+Founder-led site for a newly established London firm: Home, About, Services (overview + three discipline pages via one `ServiceDetailPage` template), Experience (founder track record), Sectors (overview + `SectorDetailPage` template ×6), Sustainability/ESG, Contact (validated `ContactForm`, single London head office), and four compliance pages via one `LegalPage` template.
 React 18 + Vite + Tailwind CSS + React Router.
+
+## ⚠️ Accuracy constraint (permanent)
+
+ELMEC is a **newly founded company**. The landmark programmes referenced across the site (HS2, Crossrail, M25, King's Cross, Waterloo, and the Indian pipeline/marine/power projects) were delivered by the firms that employed the founder, **Mukhtar Mohsin**, before ELMEC existed. All copy and data must present them as the **founder's personal career experience** — never as ELMEC's own delivered work. The `/experience` section, homepage stats band, About timeline and every "related experience" strip carry explicit attribution; do not remove or weaken it when editing (see the warning blocks in `src/data/experience.js`, `src/data/stats.js`, `src/data/about.js`). Likewise: one London office only, sustainability figures are **commitments/targets** (not achievements), and global reach is framed as ambition.
 
 ```bash
 npm install
@@ -52,50 +54,44 @@ Restrained: 250ms hover transitions (`duration-250`), one fade-and-rise scroll r
 src/
 ├── data/          # ALL content as plain data — swap for CMS/API calls
 │   ├── site.js    #   nav, footer, contact, legal links
-│   ├── home.js / about.js / projectsPage.js   # page editorial copy
+│   ├── home.js / about.js       # page editorial copy (founder positioning)
+│   ├── experience.js            # ⚠ FOUNDER track record — attributed, never ELMEC projects
 │   ├── servicesPages.js  # services overview + 3 discipline detail entries
 │   ├── sectorsPages.js   # sectors overview + 6 sector detail entries
-│   ├── projects.js       # 12 full case studies + filter vocabularies
-│   ├── news.js           # 10 articles with structured rich-text bodies
-│   ├── careers.js        # employer brand + jobs array (ATS slot)
-│   ├── sustainability.js # ESG copy + placeholder metrics
-│   ├── contact.js        # offices, enquiry types, general enquiries
+│   ├── stats.js          # ⚠ founder-attributed trust-band figures
+│   ├── sustainability.js # ESG commitments/targets (startup-honest)
+│   ├── contact.js        # single London head office, enquiry types
 │   └── legal.js          # 4 compliance pages (⚠ placeholder legal copy)
 ├── components/
 │   ├── index.js   # component barrel — everything exports from here
 │   ├── ui/        # Button, Container, Section, SectionReveal, SectionHeading, Icon
 │   ├── layout/    # Layout, Header, Footer
-│   ├── sections/  # Hero, StatBand, CTABand, Timeline, Gallery
-│   ├── cards/     # ServiceCard, ProjectCard, SectorTile, SectorCard, NewsCard,
-│   │              # ValueCard, TeamCard, MetricCard, QuoteCard, OfficeCard
-│   ├── projects/  # ProjectFilter (shared filter control: projects/jobs/news)
-│   ├── careers/   # JobListings (filterable, expandable, ATS-ready)
+│   ├── sections/  # Hero, StatBand, CTABand, Timeline
+│   ├── cards/     # ServiceCard, ExperienceCard, SectorTile, SectorCard,
+│   │              # ValueCard, TeamCard (future hires), MetricCard, OfficeCard
 │   ├── contact/   # ContactForm (validated, accessible)
-│   └── templates/ # ServiceDetailPage, CaseStudyPage, SectorDetailPage,
-│                  # ArticlePage, LegalPage (data-driven page templates)
-├── pages/         # Home, About, Services, Projects, Sectors, Sustainability,
-│                  # Careers, News, Contact (+ PlaceholderPage for 404s)
-└── App.jsx        # router — every destination resolves; detail routes are dynamic
+│   └── templates/ # ServiceDetailPage, SectorDetailPage, LegalPage (data-driven)
+├── pages/         # Home, About, Services, Experience, Sectors, Sustainability,
+│                  # Contact (+ PlaceholderPage for 404s)
+└── App.jsx        # router — every destination resolves; sector routes are dynamic
 ```
 
-## Adding pages in later stages
+## Adding pages later
 
 1. Create the page in `src/pages/`, composing from `src/components/index.js`.
-2. In `App.jsx`, replace that route's `<PlaceholderPage>` element. Paths never change.
-3. Add content as data in `src/data/` — components stay presentation-only.
+2. Register the route in `App.jsx`; add content as data in `src/data/` — components stay presentation-only.
+3. News and Careers were removed deliberately for the startup stage — reintroduce them only as real sections, and restore the removed components from git history if needed.
 
 ## Integration points (search for these comments)
 
-- `PLACEHOLDER IMAGE` / `HERO PHOTOGRAPHY SLOT` — swap Unsplash placeholders for commissioned photography.
-- `PLACEHOLDER METRICS` (`src/data/stats.js`, `src/data/sustainability.js`, project `results`) — audited figures.
+- `PLACEHOLDER IMAGE` / `HERO PHOTOGRAPHY SLOT` — swap Unsplash placeholders for commissioned/licensed photography.
+- `src/data/stats.js` / `src/data/experience.js` — PLACEHOLDER founder figures and programme details, to be confirmed by the founder.
 - `BACKEND INTEGRATION POINT` — newsletter POST (`Footer.jsx`) and contact form POST (`ContactForm.jsx`).
-- `ATS INTEGRATION POINT` (`src/data/careers.js`, `JobListings.jsx`) — careers API feed + application URLs.
-- `ASSET INTEGRATION POINT` (`src/data/sustainability.js`) — the real Sustainability Report download.
-- `MAP INTEGRATION POINT` (`ContactPage.jsx`) — embedded HQ map.
-- `SHARE INTEGRATION POINT` (`ArticlePage.jsx`) — canonical URLs for social sharing.
+- `ASSET INTEGRATION POINT` (`src/data/sustainability.js`) — the Sustainability Report when published.
+- `MAP INTEGRATION POINT` (`ContactPage.jsx`) — embedded head-office map.
 - ⚠️ `src/data/legal.js` — placeholder legal copy; **must be replaced with vetted legal content before launch**.
 - Logo slot (`Header.jsx`, `Footer.jsx`) — replace the text mark with the ELMEC SVG lockup.
-- `src/data/site.js` / `src/data/contact.js` — real contact details, office directory and social URLs.
+- `src/data/site.js` / `src/data/contact.js` / `src/data/about.js` — real London address, phone, email and social URLs.
 
 ## Accessibility (WCAG 2.1 AA)
 

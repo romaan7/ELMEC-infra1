@@ -1,14 +1,18 @@
 /**
- * About page content — hero, mission, global presence, values, leadership
- * and company milestones. PLACEHOLDER COPY in the final tone of voice;
- * replace with approved corporate messaging. CMS-ready: same-shape swap.
+ * About page content — founder-led positioning for a newly established firm.
+ *
+ * ⚠️ ACCURACY CONSTRAINT: ELMEC is newly founded. All landmark programmes
+ * referenced here are the FOUNDER'S career experience with prior employers
+ * (Balfour Beatty, Crossrail/HS2 delivery partners, Network Rail supply
+ * chain, L&T, HCC, Tata Motors, Enable Infrastructure) — never ELMEC's own
+ * delivered work. Keep that framing in every edit. CMS-ready.
  */
 
 export const aboutHero = {
   eyebrow: 'About ELMEC',
   headline: 'Built on engineering. Defined by outcomes.',
   subhead:
-    'For more than twenty-five years, ELMEC has delivered the civil, electrical and mechanical backbone of modern economies — quietly, precisely, and at scale.',
+    'A newly founded London firm with a career’s worth of infrastructure behind it — integrated civil, electrical and mechanical delivery, led by cost certainty.',
   /* HERO PHOTOGRAPHY SLOT — replace with commissioned corporate photography. */
   image:
     'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2400&q=80',
@@ -17,64 +21,30 @@ export const aboutHero = {
 
 export const mission = {
   eyebrow: 'Who we are',
-  heading: 'One firm. Three disciplines. A single standard of delivery.',
+  heading: 'A new firm. Not a new discipline.',
   paragraphs: [
-    'ELMEC Infrastructure is a global engineering and construction firm working across civil infrastructure, electrical works and mechanical works. We design, build and commission the assets that societies depend on — the crossings, grids, treatment works, hospitals and plants that must simply work, every day, for decades.',
-    'What distinguishes us is integration. Where most contractors assemble disciplines through subcontract chains, ELMEC self-delivers all three under one management system, one safety culture and one accountable team. On complex programmes, that integration is not a convenience — it is the difference between a schedule held and a schedule lost.',
-    'We are deliberately understated about it. Our clients measure us the way we measure ourselves: assets energised, corridors opened, plants commissioned — on time, safely, and built to outlast the people who built them.',
+    'ELMEC Infrastructure is a UK-founded, London-based civil infrastructure firm delivering integrated civil, electrical and mechanical works, with particular strength in rail, stations, highways and energy. We are new as a company — and deliberate about saying so. What we bring to a programme is not a corporate history; it is the disciplines our founder spent more than twenty years practising on the programmes that define modern British infrastructure.',
+    'Our distinctive edge is cost certainty. First-principles estimating, disciplined bid management and rigorous commercial administration are not support functions here — they are the product. Clients engage ELMEC to know, before committing, what the work truly costs and how it will actually be built.',
+    'Our ambition is global recognition. Our claim today is narrower and more useful: an integrated engineering firm small enough to give a programme its founder’s personal attention, and experienced enough to deserve the work.',
   ],
   /* Mission statement — rendered as the large display pull-quote. */
-  pullQuote: 'We exist to engineer infrastructure the world can rely on — and to deliver it without drama.',
+  pullQuote: 'We exist to engineer infrastructure the world can rely on — and to price it honestly before we build it.',
 };
 
 /**
- * Global presence — regional breakdown reinforcing the global claim.
- * PLACEHOLDER FIGURES — replace with real office/operations data.
+ * Headquarters — ELMEC operates from a single London head office.
+ * Do NOT reintroduce a multi-region office network here until one exists;
+ * global reach is framed as ambition only. PLACEHOLDER address details.
  */
-export const globalPresence = {
-  eyebrow: 'Global presence',
-  heading: 'Local delivery, worldwide',
-  lede: 'Regional businesses with deep local knowledge, backed by the standards and balance sheet of a global firm.',
-  regions: [
-    {
-      id: 'uk-europe',
-      name: 'UK & Europe',
-      offices: '12',
-      hubs: 'London (Global HQ) · Copenhagen · Warsaw',
-      note: 'Group headquarters and our largest delivery business.',
-    },
-    {
-      id: 'middle-east',
-      name: 'Middle East',
-      offices: '6',
-      hubs: 'Dubai · Riyadh · Doha',
-      note: 'Major transport and industrial programmes since 2004.',
-    },
-    {
-      id: 'asia-pacific',
-      name: 'Asia-Pacific',
-      offices: '8',
-      hubs: 'Sydney · Singapore · Ho Chi Minh City',
-      note: 'Water, transport and resilience-led infrastructure.',
-    },
-    {
-      id: 'north-america',
-      name: 'North America',
-      offices: '5',
-      hubs: 'Toronto · Denver',
-      note: 'Industrial, energy and district utilities growth market.',
-    },
-    {
-      id: 'africa',
-      name: 'Africa',
-      offices: '4',
-      hubs: 'Nairobi · Accra',
-      note: 'Power and connectivity programmes with local partners.',
-    },
-  ],
+export const headquarters = {
+  eyebrow: 'Where we are',
+  heading: 'Headquartered in London, United Kingdom',
+  text: 'ELMEC operates from a single head office in London — close to the programmes, clients and supply chains of the UK’s infrastructure market. As the firm grows, so will its footprint; until then, one office, one accountable team.',
+  addressLines: ['One Meridian Square', 'London EC2A 4DP', 'United Kingdom'], // PLACEHOLDER
+  ambition: 'Global recognition is the ambition. London is the base camp.',
 };
 
-/** Core values — drives the ValueCard grid. */
+/** Core values — firm values (capability and conduct, not track record). */
 export const values = {
   eyebrow: 'Our values',
   heading: 'What we will not compromise',
@@ -107,127 +77,88 @@ export const values = {
 };
 
 /**
- * Leadership team — drives the TeamCard grid.
- * PLACEHOLDER EXECUTIVES — replace names, roles, bios and photography
- * with the real leadership team (commissioned portraits, consistent crop).
+ * Founder profile — Mukhtar Mohsin.
+ * The leadership section shows the founder only; further appointments
+ * will be added here as the team grows.
  */
-export const leadership = {
-  eyebrow: 'Leadership',
-  heading: 'Experienced hands, accountable to the work',
-  members: [
-    {
-      id: 'mukhtar-mohsin',
-      name: 'Mukhtar Mohsin',
-      role: 'Chief Executive Officer',
-      bio: 'Civil engineer by training; 28 years delivering major transport programmes across three continents.',
-      // Real portrait — served from public/images/team/
-      photo: '/images/team/mukhtar-mohsin.jpg',
-      photoAlt: 'Portrait of Mukhtar Mohsin, Chief Executive Officer',
-    },
-    {
-      id: 'david-okonkwo',
-      name: 'David Okonkwo',
-      role: 'Chief Operating Officer',
-      bio: 'Leads global delivery and the group safety system; formerly regional MD for Africa and the Middle East.',
-      photo:
-        'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=75',
-      photoAlt: 'Portrait of David Okonkwo, Chief Operating Officer',
-    },
-    {
-      id: 'sarah-lindqvist',
-      name: 'Sarah Lindqvist',
-      role: 'Chief Financial Officer',
-      bio: 'Two decades in infrastructure finance, including a decade structuring public–private programmes.',
-      photo:
-        'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=75',
-      photoAlt: 'Portrait of Sarah Lindqvist, Chief Financial Officer',
-    },
-    {
-      id: 'rajan-mehta',
-      name: 'Rajan Mehta',
-      role: 'Group Engineering Director',
-      bio: 'Chartered in both electrical and mechanical engineering; custodian of ELMEC’s technical standards.',
-      photo:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=75',
-      photoAlt: 'Portrait of Rajan Mehta, Group Engineering Director',
-    },
-    {
-      id: 'amira-haddad',
-      name: 'Amira Haddad',
-      role: 'Managing Director, Middle East',
-      bio: 'Built the region’s delivery business from a single project office to six offices and 2,000 people.',
-      photo:
-        'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=75',
-      photoAlt: 'Portrait of Amira Haddad, Managing Director for the Middle East',
-    },
-    {
-      id: 'thomas-beck',
-      name: 'Thomas Beck',
-      role: 'Group Director, HSE & Sustainability',
-      bio: 'Owns the zero-harm standard and the 2040 net-zero roadmap across every ELMEC operation.',
-      photo:
-        'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=75',
-      photoAlt: 'Portrait of Thomas Beck, Group Director of HSE and Sustainability',
-    },
+export const founder = {
+  name: 'Mukhtar Mohsin',
+  role: 'Founder & Chief Executive Officer',
+  credentials: 'B.Tech (Hons) Civil Engineering, IIT Roorkee · Member, IET (UK) · NVQ Level 4 Estimating · British national',
+  /* Headshot — replace with a commissioned portrait when available. */
+  photo: '/images/team/mukhtar-mohsin.jpg',
+  photoAlt: 'Portrait of Mukhtar Mohsin, Founder and Chief Executive Officer of ELMEC Infrastructure',
+  bio: [
+    'Mukhtar Mohsin founded ELMEC Infrastructure in London with a conviction formed over twenty years inside the industry: that programmes succeed or fail on cost certainty, and that the disciplines which create it — first-principles estimating, rigorous bid management, honest commercial administration — deserve a firm built around them.',
+    'Before establishing ELMEC, his career ran through the programmes that define modern British infrastructure: King’s Cross Northern Ticket Hall and the M25 widening with Balfour Beatty Civil Engineering; Crossrail’s Tottenham Court Road, Liverpool Street and Moorgate stations with Volker Fitzpatrick, Hochtief and VGC; Network Rail works at Waterloo; and station estimates for HS2 at Euston, Old Oak Common, Curzon Street and Interchange. Most recently he led bids and cost strategy at Enable Infrastructure across rail, road, solar, bridges and tunnels, including multi-site trackside works in Ireland.',
+    'His engineering foundations were laid earlier, in India — heavy civil site engineering with Larsen & Toubro and Hindustan Construction on major pipelines, port breakwaters, bridges and power projects, and industrial plant expansion with Tata Motors. A graduate of IIT Roorkee and a Member of the IET, he combines chartered-grade technical depth with an estimator’s refusal to be vague about numbers.',
   ],
 };
 
 /**
- * Company milestones — drives the Timeline component.
- * PLACEHOLDER HISTORY — replace with the verified corporate record.
+ * Founder career timeline (formerly a company-history timeline).
+ * ⚠️ ATTRIBUTION: every milestone before 2026 belongs to the founder's
+ * career with prior employers — NOT to ELMEC. PLACEHOLDER years to be
+ * confirmed by the founder.
  */
 export const milestones = {
-  eyebrow: 'Our history',
-  heading: 'A quarter-century of keeping promises',
+  eyebrow: 'The career behind the company',
+  heading: 'Twenty years in the making',
   items: [
     {
-      id: '1998',
-      year: '1998',
-      title: 'Founded in London',
-      description: 'ELMEC Engineering opens as a specialist civil contractor with a staff of twelve.',
+      id: 'iit',
+      year: '2003',
+      title: 'IIT Roorkee',
+      description: 'Graduates with a B.Tech (Honours) in Civil Engineering from one of the world’s most selective engineering institutions.',
     },
     {
-      id: '2004',
-      year: '2004',
-      title: 'First international contract',
-      description: 'A Gulf-region power distribution programme takes ELMEC outside the UK for the first time.',
+      id: 'india-heavy-civil',
+      year: '2003–08',
+      title: 'L&T · Hindustan Construction · Tata Motors',
+      description: 'Heavy civil engineering across India — major pipelines, port breakwaters, bridges, power and nuclear-ancillary projects, and industrial plant expansion.',
     },
     {
-      id: '2009',
+      id: 'balfour-beatty',
       year: '2009',
-      title: 'National rail framework',
-      description: 'Appointment to a ten-year national rail framework; the firm passes 1,000 people.',
+      title: 'Balfour Beatty Civil Engineering, UK',
+      description: 'Moves to the UK. Estimating and commercial roles on King’s Cross Northern Ticket Hall and the M25 widening.',
     },
     {
-      id: '2014',
-      year: '2014',
-      title: 'Regional headquarters, Dubai',
-      description: 'A permanent Middle East business opens, followed by entry into Asia-Pacific.',
+      id: 'crossrail',
+      year: '2013',
+      title: 'The Crossrail years',
+      description: 'Station works at Tottenham Court Road, Liverpool Street and Moorgate with Volker Fitzpatrick, Hochtief and VGC.',
     },
     {
-      id: '2018',
-      year: '2018',
-      title: 'Group-wide certification',
-      description: 'ISO 9001, 14001 and 45001 achieved across every operating region.',
+      id: 'waterloo',
+      year: '2017',
+      title: 'Network Rail — Waterloo',
+      description: 'Commercial and estimating roles at the UK’s busiest railway station.',
     },
     {
-      id: '2022',
-      year: '2022',
-      title: 'Renewables & grid division',
-      description: 'A dedicated energy-transition business launches; ELMEC begins work in its 40th country.',
+      id: 'hs2',
+      year: '2019',
+      title: 'HS2 stations',
+      description: 'First-principles station estimates for Euston, Old Oak Common, Curzon Street and Interchange.',
     },
     {
-      id: '2025',
-      year: '2025',
-      title: 'Net zero by 2040',
-      description: 'The group publishes its science-based net-zero roadmap and passes 10,000 people worldwide.',
+      id: 'enable',
+      year: '2023',
+      title: 'Enable Infrastructure · Apex Information Management',
+      description: 'Bid management and cost leadership across rail, road, solar, bridges and tunnels, including Irish multi-site trackside works.',
+    },
+    {
+      id: 'elmec',
+      year: '2026',
+      title: 'ELMEC Infrastructure founded',
+      description: 'Establishes ELMEC in London: integrated civil, electrical and mechanical delivery, built around cost certainty.',
     },
   ],
 };
 
 export const aboutCta = {
-  headline: 'The work is the pitch.',
-  subhead: 'Explore the projects, or talk to the people who deliver them.',
+  headline: 'The experience is the pitch.',
+  subhead: 'Read the track record, then talk to the person who built it.',
   primary: { label: 'Contact us', href: '/contact' },
-  secondary: { label: 'Join ELMEC', href: '/careers' },
+  secondary: { label: 'View the track record', href: '/experience' },
 };

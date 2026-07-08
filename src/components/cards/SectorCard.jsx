@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
  * SectorCard — rich visual tile for the Sectors overview page.
  * The image-led sibling of SectorTile (which stays typographic for
  * compact strips): photograph, navy scrim, sector name and one-line
- * descriptor, whole card one link. Visual language matches ProjectCard.
+ * descriptor, whole card one link. Matches the site's image-led card language.
  */
 export default function SectorCard({ sector }) {
   return (

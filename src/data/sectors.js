@@ -1,42 +1,44 @@
 /**
- * Sectors served — drives the homepage sectors strip and the Sectors
- * mega-menu. CMS-ready: swap for an API call returning the same shape.
+ * Sectors served — ELMEC's genuine sector strengths, derived from the
+ * founder's domains. These describe firm CAPABILITY (expertise we offer
+ * today), not a claim of ELMEC-delivered contracts. Drives the homepage
+ * sectors strip and the Sectors mega-menu. CMS-ready.
  */
 export const sectors = [
   {
     id: 'transport-rail',
     name: 'Transport & Rail',
     href: '/sectors/transport-rail',
-    summary: 'Rail, metro, highways and aviation programmes that keep economies moving.',
+    summary: 'Stations, trackside civils and rail systems — our deepest strength.',
+  },
+  {
+    id: 'highways',
+    name: 'Highways',
+    href: '/sectors/highways',
+    summary: 'Motorway widening, pavements and highway structures.',
   },
   {
     id: 'energy-power',
     name: 'Energy & Power',
     href: '/sectors/energy-power',
-    summary: 'Generation, transmission and renewables for a decarbonising grid.',
+    summary: 'Solar and power infrastructure, from civils to connection.',
   },
   {
-    id: 'water',
-    name: 'Water',
-    href: '/sectors/water',
-    summary: 'Treatment works, networks and flood resilience for growing cities.',
+    id: 'ports-marine',
+    name: 'Ports & Marine',
+    href: '/sectors/ports-marine',
+    summary: 'Breakwaters, jetties and marine civil works.',
   },
   {
-    id: 'buildings',
-    name: 'Buildings',
-    href: '/sectors/buildings',
-    summary: 'Commercial, civic and healthcare facilities built to perform.',
+    id: 'industrial-buildings',
+    name: 'Industrial & Buildings',
+    href: '/sectors/industrial-buildings',
+    summary: 'Plants, factories and station buildings.',
   },
   {
-    id: 'industrial',
-    name: 'Industrial',
-    href: '/sectors/industrial',
-    summary: 'Manufacturing and process plants engineered for uptime.',
-  },
-  {
-    id: 'utilities',
-    name: 'Utilities',
-    href: '/sectors/utilities',
-    summary: 'Gas, telecoms and district energy networks, delivered at scale.',
+    id: 'water-pipelines',
+    name: 'Water & Pipelines',
+    href: '/sectors/water-pipelines',
+    summary: 'Major pipeline infrastructure and associated works.',
   },
 ];
